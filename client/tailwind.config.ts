@@ -1,9 +1,10 @@
 import type { Config } from "tailwindcss";
 
 /**
- * Tailwind CSS configuration
+ * Tailwind CSS v4 configuration
  * Configured to work alongside Ant Design without conflicts
- * Preflight is disabled to prevent CSS reset conflicts with Ant Design
+ * Note: Tailwind v4 handles preflight differently - it's controlled via CSS imports
+ * The preflight is disabled by importing only components and utilities layers
  */
 const config: Config = {
     content: [
@@ -12,10 +13,6 @@ const config: Config = {
         "./app/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/**/*.{js,ts,jsx,tsx,mdx}",
     ],
-    corePlugins: {
-        // Disable preflight to avoid conflicts with Ant Design's base styles
-        preflight: false,
-    },
     theme: {
         extend: {},
     },
