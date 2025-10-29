@@ -1,0 +1,11 @@
+/**
+ * Global styles for VanoPay application
+ * Combines Tailwind CSS v4 with Ant Design
+ * 
+ * Tailwind's preflight is disabled in tailwind.config.ts to avoid
+ * conflicts with Ant Design's styling system
+ * 
+ * Import Ant Design reset styles first, then Tailwind utilities
+ */
+@import "antd/dist/reset.css";
+@import "tailwindcss";
